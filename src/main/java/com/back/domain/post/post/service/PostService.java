@@ -16,9 +16,9 @@ public class PostService {
         return postRepository.count();
     }
 
-    public Post write(String title, String content) {
+    public void write(String title, String content) {
         Post post = new Post(title, content);
-        return postRepository.save(post);
+        postRepository.save(post);
     }
 
     public List<Post> findAll() {
