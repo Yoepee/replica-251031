@@ -23,6 +23,8 @@ public class BaseInitData {
         return args -> {
             self.work1();
             self.work2();
+            self.work3();
+            self.work4();
         };
     }
 
@@ -37,6 +39,18 @@ public class BaseInitData {
 
     @Transactional
     public void work2() {
+        postService.findAll()
+                .forEach(post -> System.out.println("Post id:"+post.getId()));
+    }
+
+    @Transactional
+    public void work3() {
+        postService.findAll()
+                .forEach(post -> System.out.println("Post id:"+post.getId()));
+    }
+
+    @Transactional
+    public void work4() {
         postService.findAll()
                 .forEach(post -> System.out.println("Post id:"+post.getId()));
     }
