@@ -15,7 +15,7 @@ import java.util.Map;
  * Source DB 1개(쓰기)
  * Replica DB 2개(읽기, 랜덤분산)
  */
-@Profile("Prod")
+@Profile("prod")
 @Configuration
 public class CustomDataSourceConfig {
     /**
